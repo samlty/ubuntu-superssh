@@ -3,7 +3,7 @@ Docker Ubuntu Supervisor with SSH
 
 1) Get clone of this repo.
 
-> git clone git@github.com:ykocaman/ubuntu-superssh.git
+> git clone git@github.com:ykocaman/ubuntu-superssh.git  
 > cd ubuntu-superssh
 
 2) copy your id_rsa.pub to ssh/know_hosts if you want.
