@@ -18,9 +18,14 @@ Docker Ubuntu Supervisor with SSH
 
 > docker run -d --name superssh ykocaman/ubuntu-superssh
 
+OR
+
+1-4) You get quickly this image from docker hub.
+
+> docker run -d ykocaman/ubuntu-superssh
+
 5) connect to your sweet docker container.
 
 > ssh user@172.17.0.2
 
 if you didnt change password from Dockerfile line 19, default password is "user".
-
