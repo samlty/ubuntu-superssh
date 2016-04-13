@@ -7,6 +7,7 @@ RUN \
   apt-get install -y supervisor  --force-yes && \
   apt-get install -y openssh-server  --force-yes && \
   rm -rf /var/lib/apt/lists/* && \
+  rm -rf /var/cache/apt/apt/* && \
   sed -i 's/^\(\[supervisord\]\)$/\1\nnodaemon=true/' /etc/supervisor/supervisord.conf
 
 #for ssh connecting adding user
@@ -24,6 +25,7 @@ RUN mkdir /var/run/sshd
 #copy your id_rsa.pub to ssh/authorized_keys
 RUN mkdir /home/user/.ssh
 COPY ssh/authorized_keys /home/user/.ssh/
+RUN chown user:user /home/user/.ssh -R
 
 #copy conf of supervisor
 COPY supervisor/conf.d /etc/supervisor/conf.d/

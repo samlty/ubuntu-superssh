@@ -10,6 +10,12 @@ Docker Ubuntu Supervisor with SSH
 
 > cat ~/.ssh/id_rsa.pub > ssh/known_hosts
 
+OR
+
+after running container, you can update ssh key.
+
+> copy-ssh-id "IP.ADDRESS"
+
 3) build docker image.
 
 > docker build --rm -t ykocaman/ubuntu-superssh:latest .
@@ -20,7 +26,7 @@ Docker Ubuntu Supervisor with SSH
 
 OR
 
-1-4) You get quickly this image from docker hub.
+1-4) get quickly this image from docker hub.
 
 > docker run -d ykocaman/ubuntu-superssh
 
@@ -29,3 +35,17 @@ OR
 > ssh user@172.17.0.2
 
 if you didnt change password from Dockerfile line 19, default password is "user".
+
+Extras:  
+
+with docker-compose you can create multiple containers easily.  
+
+> docker-compose up -d
+
+to remove  
+
+> docker-compose down
+
+for ip addresses of all containers  
+
+> docker inspect -f '{{.Name}} - {{.NetworkSettings.IPAddress }}' $(docker ps -aq)
