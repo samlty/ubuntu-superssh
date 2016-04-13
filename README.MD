@@ -14,7 +14,7 @@ OR
 
 after running container, you can update ssh key.
 
-> copy-ssh-id "IP.ADDRESS"
+> copy-ssh-id user@IP.ADD.RE.SS
 
 3) build docker image.
 
