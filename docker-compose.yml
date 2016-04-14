@@ -1,20 +1,20 @@
-server1:
+kiosk1:
   image: ykocaman/ubuntu-superssh:latest
-  container_name: server1
+  container_name: kiosk1
   restart: unless-stopped
-server2:
+kiosk2:
   image: ykocaman/ubuntu-superssh:latest
-  container_name: server2
+  container_name: kiosk2
   restart: unless-stopped
-server3:
+kiosk3:
   image: ykocaman/ubuntu-superssh:latest
-  container_name: server3
+  container_name: kiosk3
   restart: unless-stopped
-server4:
+kiosk4:
   image: ykocaman/ubuntu-superssh:latest
-  container_name: server4
+  container_name: kiosk4
   restart: unless-stopped
-server5:
+kiosk5:
   image: ykocaman/ubuntu-superssh:latest
-  container_name: server5
+  container_name: kiosk5
   restart: unless-stopped

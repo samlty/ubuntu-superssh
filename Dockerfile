@@ -7,7 +7,7 @@ RUN \
   apt-get install -y supervisor  --force-yes && \
   apt-get install -y openssh-server  --force-yes && \
   rm -rf /var/lib/apt/lists/* && \
-  rm -rf /var/cache/apt/apt/* && \
+  rm -rf /var/cache/apt/* && \
   sed -i 's/^\(\[supervisord\]\)$/\1\nnodaemon=true/' /etc/supervisor/supervisord.conf
 
 #for ssh connecting adding user
