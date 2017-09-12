@@ -5,6 +5,7 @@ MAINTAINER ykocaman
 RUN \
   apt-get update && \
   apt-get install -y supervisor  --force-yes && \
+  apt-get install -y gdb  --force-yes && \
   apt-get install -y openssh-server  --force-yes && \
   rm -rf /var/lib/apt/lists/* && \
   rm -rf /var/cache/apt/* && \
