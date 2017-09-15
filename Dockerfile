@@ -14,6 +14,7 @@ RUN \
   rm -rf /var/cache/apt/* && \
   sed -i 's/^\(\[supervisord\]\)$/\1\nnodaemon=true/' /etc/supervisor/supervisord.conf
 
+
 #for ssh connecting adding user
 RUN useradd -ms /bin/bash user
 
