@@ -5,12 +5,15 @@ MAINTAINER ykocaman
 RUN \
   apt-get update && \
   apt-get install -y supervisor  --force-yes && \
+  apt-get install -y iproute  --force-yes && \
+  apt-get install -y net-tools  --force-yes && \
   apt-get install -y gdb  --force-yes && \
   apt-get install -y iperf  --force-yes && \
   apt-get install -y openssh-server  --force-yes && \
   rm -rf /var/lib/apt/lists/* && \
   rm -rf /var/cache/apt/* && \
   sed -i 's/^\(\[supervisord\]\)$/\1\nnodaemon=true/' /etc/supervisor/supervisord.conf
+
 
 #for ssh connecting adding user
 RUN useradd -ms /bin/bash user
