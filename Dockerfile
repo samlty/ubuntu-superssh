@@ -5,6 +5,8 @@ MAINTAINER ykocaman
 RUN \
   apt-get update && \
   apt-get install -y supervisor  --force-yes && \
+  apt-get install -y iproute  --force-yes && \
+  apt-get install -y net-tools  --force-yes && \
   apt-get install -y gdb  --force-yes && \
   apt-get install -y iperf  --force-yes && \
   apt-get install -y openssh-server  --force-yes && \
