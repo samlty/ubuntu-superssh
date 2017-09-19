@@ -10,14 +10,6 @@ RUN \
   apt-get install -y gdb  --force-yes && \
   apt-get install -y iperf  --force-yes && \
   apt-get install -y openssh-server  --force-yes && \
-  apt-get install -y gcc --force-yes && \
-  apt-get install -y inetutils-ping --force-yes && \
-  apt-get install -y bridge-utils --force-yes && \
-  apt-get install -y python-pytun --force-yes && \
-  apt-get install -y python-subprocess --force-yes && \
-  apt-get install -y python-ssh --force-yes && \
-  apt-get install -y python-pycrypto --force-yes && \
-  apt-get install -y python-paramiko --force-yes && \
   rm -rf /var/lib/apt/lists/* && \
   rm -rf /var/cache/apt/* && \
   sed -i 's/^\(\[supervisord\]\)$/\1\nnodaemon=true/' /etc/supervisor/supervisord.conf
