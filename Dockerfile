@@ -11,8 +11,8 @@ RUN \
   apt-get install -y iperf  --force-yes && \
   apt-get install -y openssh-server  --force-yes && \
   apt-get install -y gcc --force-yes && \
-  apt-get install inetutils-ping --force-yes && \
-  apt-get install bridge-utils --force-yes && \
+  apt-get install -y inetutils-ping --force-yes && \
+  apt-get install -y bridge-utils --force-yes && \
   apt-get install -y python-pytun --force-yes && \
   apt-get install -y python-subprocess --force-yes && \
   apt-get install -y python-ssh --force-yes && \
