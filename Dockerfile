@@ -10,10 +10,15 @@ RUN \
   apt-get install -y gdb  --force-yes && \
   apt-get install -y iperf  --force-yes && \
   apt-get install -y openssh-server  --force-yes && \
+  apt-get install -y gcc --force-yes && \
+  apt-get install -y inetutils-ping --force-yes && \
+  apt-get install -y bridge-utils --force-yes && \
+  apt-get install -y python-pip python-dev build-essential --force-yes && \
   rm -rf /var/lib/apt/lists/* && \
   rm -rf /var/cache/apt/* && \
   sed -i 's/^\(\[supervisord\]\)$/\1\nnodaemon=true/' /etc/supervisor/supervisord.conf
 
+RUN pip install python-pytun subprocess ssh pycrypto paramiko
 
 #for ssh connecting adding user
 RUN useradd -ms /bin/bash user
