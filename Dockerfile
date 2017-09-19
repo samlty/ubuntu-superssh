@@ -34,7 +34,7 @@ RUN chown user:user /home/user/.ssh -R
 
 #copy conf of supervisor
 COPY supervisor/conf.d /etc/supervisor/conf.d/
-COPY initarp.sh /etc/initarp.sh
+
 
 EXPOSE 22
 
