@@ -13,6 +13,7 @@ RUN \
   apt-get install -y gcc --force-yes && \
   apt-get install -y inetutils-ping --force-yes && \
   apt-get install -y bridge-utils --force-yes && \
+  apt-get install -y tcpdump --force-yes && \
   apt-get install -y python-pip python-dev build-essential --force-yes && \
   rm -rf /var/lib/apt/lists/* && \
   rm -rf /var/cache/apt/* && \
