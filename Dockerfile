@@ -17,7 +17,7 @@ RUN \
   apt-get install -y python-pip python-dev build-essential --force-yes && \
   rm -rf /var/lib/apt/lists/* && \
   rm -rf /var/cache/apt/* && \
-  mv /usr/sbin/tcpdump /usr/bin/tcpdump  && \
+  mv /usr/sbin/tcpdump /usr/bin/tcpdump && \
   sed -i 's/^\(\[supervisord\]\)$/\1\nnodaemon=true/' /etc/supervisor/supervisord.conf
 
 RUN pip install python-pytun ssh pycrypto paramiko
